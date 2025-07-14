@@ -1,0 +1,58 @@
+{
+  "structures": [
+    {
+      "structure": "fallengod:fallen_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:banishment_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:abyssal_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:sylvan_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:tempest_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:veil_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:forge_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:void_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:time_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:blood_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:crystal_altar",
+      "weight": 1
+    },
+    {
+      "structure": "fallengod:shadow_altar",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 32,
+    "separation": 8,
+    "salt": 14357617
+  }
+}

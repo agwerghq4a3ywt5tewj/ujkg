@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/totem_of_undying"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100001
+      },
+      "model": "item/heart_of_fallen_god"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/phantom_membrane"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100002
+      },
+      "model": "item/veil_of_nullification"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100065
+      },
+      "model": "item/shadow_cloak"
+    }
+  ]
+}

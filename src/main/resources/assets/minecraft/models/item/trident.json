@@ -1,0 +1,14 @@
+{
+  "parent": "item/trident",
+  "textures": {
+    "layer0": "item/trident"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100030
+      },
+      "model": "item/abyssal_trident"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+name: FallenGodTestament
+version: 1.7.0
+main: com.fallengod.testament.TestamentPlugin
+api-version: 1.21
+author: FallenGod
+description: Epic fragment collection plugin for ultimate divine powers
+
+commands:
+  testament:
+    description: Main testament command
+    usage: /testament <status|reunite>
+    permission: fallengod.use
+  fragment:
+    description: Admin fragment commands
+    usage: /fragment <spawn|heart|veil|stats|giveall>
+    permission: fallengod.admin.spawn
+  datapack:
+    description: Datapack management commands
+    usage: /datapack <scan|locate>
+    permission: fallengod.admin.locate
+  godlex:
+    description: Divine knowledge compendium
+    usage: /godlex [book|text|god <name>]
+    permission: fallengod.use
+  altar:
+    description: Altar management commands
+    usage: /altar <regenerate|create|protect|list>
+    permission: fallengod.admin.altar
+
+permissions:
+  fallengod.use:
+    description: Basic plugin usage
+    default: true
+  fallengod.admin.*:
+    description: All admin permissions
+    default: op
+    children:
+      fallengod.admin.spawn: true
+      fallengod.admin.stats: true
+      fallengod.admin.locate: true
+      fallengod.admin.altar: true
+  fallengod.admin.spawn:
+    description: Spawn fragments
+    default: op
+  fallengod.admin.stats:
+    description: View statistics
+    default: op
+  fallengod.admin.locate:
+    description: Locate altars
+    default: op
+  fallengod.admin.altar:
+    description: Manage altars
+    default: op

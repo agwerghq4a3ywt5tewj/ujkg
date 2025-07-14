@@ -1,0 +1,26 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "item/netherite_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100020
+      },
+      "model": "item/banishment_sword"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100061
+      },
+      "model": "item/void_blade"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 100063
+      },
+      "model": "item/crimson_blade"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+# Fallen God Testament Configuration
+# Complete configuration for the ultimate divine power plugin
+
+testament:
+  # Fragment spawning configuration
+  fragments:
+    chest_spawn_chance: 0.02      # 2% chance per chest (0.01 = 1%, 0.05 = 5%)
+    mob_drop_chance: 0.001        # 0.1% chance per dangerous mob kill
+    min_chests_for_fragments: 50  # Must open 50+ chests before fragments can spawn
+    chest_cooldown_hours: 2       # Hours between chest fragment spawns
+    mob_cooldown_hours: 1         # Hours between mob fragment drops
+    
+  # Fragment rarity distribution (must sum to 100)
+  # Lower numbers = rarer fragments
+  fragment_weights:
+    fragment_1: 30  # Most common (30% chance)
+    fragment_2: 20
+    fragment_3: 15
+    fragment_4: 13
+    fragment_5: 10
+    fragment_6: 7
+    fragment_7: 5   # Rarest (5% chance)
+
+# Heart of Fallen God Configuration
+heart_of_fallen_god:
+  enabled: true
+  extra_hearts: 15              # +15 hearts (25 total health)
+  strength_level: 1             # Strength I effect
+  regeneration_level: 2         # Regeneration II effect
+  resistance_level: 1           # Resistance I effect
+  return_after_pop: true        # Return heart 45 seconds after totem pop
+  return_delay_seconds: 45      # Delay before heart returns
+  conflicts_with_forge_mace: true # Prevent coexistence with Mace of Divine Forging
+
+# Veil of Nullification Configuration
+veil_nullification:
+  enabled: true
+  range: 16.0                   # 16 block nullification range
+  veil_effects:
+    slow_falling: true          # Grant slow falling
+    night_vision: true          # Grant night vision
+    speed_level: 1              # Speed I effect
+
+# Enhanced Features
+features:
+  # Sound and particle effects
+  effects:
+    altar_completion_sound: true      # Play sounds on testament completion
+    fragment_found_particles: true    # Particle effects when finding fragments
+    ascension_effects: true          # Visual effects for ascension
+    weapon_ability_feedback: true    # Feedback for weapon abilities
+    god_specific_particles: true     # Unique particles per god
+  
+  # Cross-platform compatibility (Geyser/Floodgate)
+  cross_platform:
+    bedrock_friendly_ui: true        # Use chat/books instead of GUIs
+    avoid_offhand_triggers: true     # Don't use offhand interactions
+    chat_based_confirmations: true   # Use chat for confirmations
+    title_actionbar_feedback: true   # Use titles/actionbars for feedback
+  
+  # Altar system enhancements
+  altars:
+    grief_protection: true           # Protect altars from breaking
+    auto_regeneration: false         # Auto-regenerate broken altars
+    beacon_height_offset: 4          # Height of beacon above altar
+    export_locations: true           # Export altar locations to file
+    allow_manual_creation: true      # Allow /altar create command
+
+# Testament Conflicts Configuration
+# When players complete opposing god testaments
+conflicts:
+  enabled: true
+  
+  # Conflict penalties (applied when both opposing gods are mastered)
+  penalties:
+    fallen_vs_veil:              # Death vs Reality
+      effect: "weakness"
+      duration: 600              # 30 seconds in ticks
+      level: 1
+      message: "§c⚠ Death and Reality clash within you!"
+      
+    banishment_vs_abyssal:       # Fire vs Water
+      effect: "slowness"
+      duration: 600
+      level: 1
+      message: "§c⚠ Fire and Water war in your soul!"
+      
+    sylvan_vs_tempest:           # Nature vs Storm
+      effect: "mining_fatigue"
+      duration: 600
+      level: 1
+      message: "§c⚠ Nature and Storm cannot coexist!"
+      
+    forge_vs_void:               # Creation vs Destruction
+      effect: "nausea"
+      duration: 600
+      level: 1
+      message: "§c⚠ Creation and Destruction tear you apart!"
+      
+    time_vs_shadow:              # Light vs Dark
+      effect: "blindness"
+      duration: 300
+      level: 1
+      message: "§c⚠ Time and Shadow blind your perception!"
+      
+    blood_vs_crystal:            # Chaos vs Order
+      effect: "poison"
+      duration: 300
+      level: 1
+      message: "§c⚠ Chaos and Order poison your essence!"
+
+# God-specific configurations
+gods:
+  fallen:
+    biomes: ["SWAMP", "MANGROVE_SWAMP", "DARK_FOREST", "DEEP_DARK"]
+    center_block: "CRYING_OBSIDIAN"
+    theme_color: "DARK_PURPLE"
+    
+  banishment:
+    biomes: ["DESERT", "BADLANDS", "ERODED_BADLANDS", "SAVANNA"]
+    center_block: "MAGMA_BLOCK"
+    theme_color: "RED"
+    
+  abyssal:
+    biomes: ["OCEAN", "DEEP_OCEAN", "WARM_OCEAN", "COLD_OCEAN", "LUKEWARM_OCEAN"]
+    center_block: "DARK_PRISMARINE"
+    theme_color: "DARK_AQUA"
+    
+  sylvan:
+    biomes: ["FOREST", "BIRCH_FOREST", "JUNGLE", "TAIGA", "OLD_GROWTH_PINE_TAIGA"]
+    center_block: "OAK_LOG"
+    theme_color: "GREEN"
+    
+  tempest:
+    biomes: ["WINDSWEPT_HILLS", "JAGGED_PEAKS", "FROZEN_PEAKS", "STONY_PEAKS"]
+    center_block: "LIGHTNING_ROD"
+    theme_color: "YELLOW"
+    
+  veil:
+    biomes: ["END_HIGHLANDS", "END_MIDLANDS", "END_BARRENS", "THE_END"]
+    center_block: "END_PORTAL_FRAME"
+    theme_color: "DARK_GRAY"
+    
+  # Future expansion gods (ready for activation)
+  forge:
+    biomes: ["MOUNTAINS", "DRIPSTONE_CAVES", "LUSH_CAVES"]
+    center_block: "ANVIL"
+    theme_color: "GOLD"
+    enabled: true  # Set to true to enable
+    
+  void:
+    biomes: ["DEEP_DARK", "END_HIGHLANDS"]
+    center_block: "OBSIDIAN"
+    theme_color: "BLACK"
+    enabled: true
+    
+  time:
+    biomes: ["DEEP_DARK", "DRIPSTONE_CAVES", "LUSH_CAVES"]
+    center_block: "AMETHYST_CLUSTER"
+    theme_color: "LIGHT_PURPLE"
+    enabled: true
+    
+  blood:
+    biomes: ["NETHER_WASTES", "CRIMSON_FOREST", "WARPED_FOREST"]
+    center_block: "REDSTONE_BLOCK"
+    theme_color: "DARK_RED"
+    enabled: true
+    
+  crystal:
+    biomes: ["DRIPSTONE_CAVES", "LUSH_CAVES"]
+    center_block: "AMETHYST_CLUSTER"
+    theme_color: "AQUA"
+    enabled: true
+    
+  shadow:
+    biomes: ["DEEP_DARK", "DARK_FOREST"]
+    center_block: "SCULK_CATALYST"
+    theme_color: "GRAY"
+    enabled: true
+
+# Altar generation settings (for datapack)
+altar_generation:
+  spacing: 32                   # Chunks between altars (512 blocks)
+  separation: 8                 # Minimum chunks between different altar types
+  salt: 14357617               # Random seed modifier for generation
+  enabled: true                # Enable/disable natural altar generation
+  
+# Weapon abilities configuration
+weapon_abilities:
+  enabled: true
+  
+  # Cooldowns for weapon abilities (in seconds)
+  cooldowns:
+    forge_mastery: 30           # Mace of Divine Forging repair ability
+    void_rip: 5                 # Void Walker's Blade teleport
+    time_dilation: 25           # Chronos Staff time slow
+    ore_sense: 30               # Resonance Crystal ore detection
+    crystal_shield: 45          # Resonance Crystal protection
+    sonic_boom: 15              # Resonance Crystal block breaking
+    
+  # Ability power levels
+  power_levels:
+    time_dilation_duration: 20  # Seconds enemies are slowed
+    void_rip_distance: 10       # Blocks teleported
+    ore_sense_radius: 20        # Blocks scanned for ores
+    sonic_boom_range: 8         # Blocks affected by sonic boom
+
+# Player title and toxicity system
+player_titles:
+  enabled: true
+  toxicity_detection: true
+  
+  # Thresholds for title assignment
+  thresholds:
+    toxic_points: 5             # Points needed for TOXIC title
+    fallen_points: 10           # Points needed for FALLEN title
+    fallen_deaths: 50           # Deaths needed for FALLEN title
+    fallen_combined: 25         # Deaths + 5 toxicity = FALLEN
+    
+  # Toxicity point sources
+  toxicity_sources:
+    spam_chat: 1                # Points per spam violation
+    toxic_language: 2           # Points per toxic word
+    excessive_caps: 1           # Points per caps violation
+    rage_quit: 3                # Points for quitting after death
+
+# API and integration settings
+api:
+  enabled: true                 # Enable public API for other plugins
+  events:
+    testament_completed: true   # Fire TestamentCompletedEvent
+    fragment_found: true        # Fire FragmentFoundEvent
+    ascension_changed: true     # Fire AscensionChangedEvent
+    
+# Debug and development settings
+debug:
+  enabled: false                # Enable debug logging
+  verbose_fragment_spawning: false
+  verbose_altar_interactions: false
+  verbose_effect_applications: false
+  
+# Performance settings
+performance:
+  async_operations: true        # Use async for file operations
+  cache_player_data: true       # Cache player data in memory
+  cleanup_interval_minutes: 30  # How often to clean up unused data
+  max_cached_players: 100       # Maximum players to keep in cache

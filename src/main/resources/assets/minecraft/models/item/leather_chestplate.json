@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/leather_chestplate"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100065
+      },
+      "model": "item/shadow_mantle"
+    }
+  ]
+}

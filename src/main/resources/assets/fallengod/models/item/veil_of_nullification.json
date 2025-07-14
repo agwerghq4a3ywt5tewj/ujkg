@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fallengod:item/veil_of_nullification"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100002
+      },
+      "model": "fallengod:item/veil_of_nullification_custom"
+    }
+  ]
+}

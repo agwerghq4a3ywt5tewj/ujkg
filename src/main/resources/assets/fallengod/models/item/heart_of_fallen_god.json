@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fallengod:item/heart_of_fallen_god"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100001
+      },
+      "model": "fallengod:item/heart_of_fallen_god_custom"
+    }
+  ]
+}
